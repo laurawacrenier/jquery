@@ -15,6 +15,14 @@ define( [
 // defaults to document
 // keepScripts (optional): If true, will include scripts passed in the html string
 jQuery.parseHTML = function( data, context, keepScripts ) {
+	
+	function say(a, b) {
+  print(a + " " + b);
+}
+
+say("hello", "world", "!"); // Noncompliant; last argument is not used
+	
+	
 	if ( typeof data !== "string" ) {
 		return [];
 	}
